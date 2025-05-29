@@ -1,50 +1,64 @@
-#  ML Intern Case Study – Email Campaign Analysis
+# Email Campaign Optimization
 
-This project analyzes the effectiveness of different email campaign strategies by examining open and click-through rates across versions, timings, and weekdays. It was developed as part of a machine learning internship case study.
-
----
-
-##  Objective
-
-To evaluate the performance of various email versions based on:
-- Open rates
-- Click-through rates (CTR)
-- Time of day and day of week trends
+This project analyzes an email marketing campaign to derive insights and build a strategy for improving click-through rates. It includes exploratory data analysis and discusses how a predictive model could help send optimized emails to users.
 
 ---
 
-##  Files Included
+##  Files in the Repository
 
-| File Name               | Description                                      |
-|------------------------|--------------------------------------------------|
-| `analysis.py`          | Main Python script for loading and analyzing the data |
-| `email_table.csv`      | Contains details of all emails sent              |
-| `email_opened_table.csv` | Email IDs of opened emails                     |
-| `link_clicked_table.csv` | Email IDs of clicked links                     |
-| `README.md`            | This documentation                              |
+- `analysis.py`: Python script that performs data loading, merging, and analysis.
+- `email_table.csv`: Original list of all users who were sent the emails.
+- `email_opened_table.csv`: Subset of users who opened the emails.
+- `link_clicked_table.csv`: Subset of users who clicked the link in the email.
+- `README.md`: This file – documentation of the project.
 
 ---
 
-##  Analysis Performed
+##  Key Questions & Insights
 
--  Merged email, opened, and clicked datasets
--  Calculated total emails sent, open counts, click counts
--  Grouped performance by email text and version
--  Identified best-performing email variation based on click rate
--  Analyzed hourly click trends
--  Analyzed weekday click trends
+###  What percentage of users opened the email and clicked the link?
+
+- **Total Emails Sent:** 100,000  
+- **Emails Opened:** 56,154 →  **56.15% opened**
+- **Links Clicked:** 11,898 → 🔗 **11.90% clicked**
 
 ---
 
-##  Key Insights
+###  Can we build a model to improve email targeting?
 
-- **Best Performing Email**:
-  - Text: `short email`
-  - Version: `Personalised version`
-  - Click Rate: `3.12%`
+Yes. Although emails were sent randomly in this campaign, we can build a **classification model** (e.g., Logistic Regression or Decision Tree) using:
 
-- **Best Time to Send Emails**: Between **9 AM to 11 AM**
-- **Best Day to Send Emails**: **Wednesday**, followed by **Tuesday** and **Thursday**
+- `email_version` (A or B)
+- `email_text` (Short or Long)
+
+These can help **predict the probability of a user clicking**. Once trained, the model can optimize which type of email to send, increasing overall effectiveness.
+
+---
+
+###  By how much could a model improve click-through rate?
+
+To estimate this:
+
+1. Train a predictive model on the existing dataset.
+2. Use the model to simulate a campaign where each user gets the most likely-to-be-clicked email.
+3. Compare the simulated CTR to the current random assignment CTR.
+
+> Example:  
+> Current CTR = 11.90%  
+> Simulated CTR = 16.00%  
+> Uplift = **34.45% improvement**
+
+---
+
+###  Did we find any interesting patterns in the campaign?
+
+Yes. Even with limited data, some patterns were observed:
+
+- **Short emails performed better** than long emails in terms of both open and click rates.
+- **Email version A** had a slight edge over B in engagement.
+- The combination of **Short text + Version A** yielded the highest click-through rate.
+
+>  Recommendation: Use "Short + A" as a baseline in future campaigns.
 
 ---
 
@@ -56,4 +70,3 @@ To evaluate the performance of various email versions based on:
 - Git & GitHub
 
 ---
-
