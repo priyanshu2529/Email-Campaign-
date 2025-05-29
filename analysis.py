@@ -24,7 +24,6 @@ print(f"\nTotal Emails Sent: {total}")
 print(f"Total Opened: {opens} ({opens / total:.2%})")
 print(f"Total Clicked: {clicks} ({clicks / total:.2%})")
 
-
 # STEP 4: Group Performance by Email Type
 
 performance = email_df.groupby(["email_text", "email_version"]).agg(
@@ -43,7 +42,6 @@ performance = performance.sort_values("click_rate", ascending=False)
 print("\n Performance by Email Type:\n")
 print(performance)
 
-
 # STEP 5: Identify Best Email Type
 
 best = performance.iloc[0]
@@ -51,7 +49,6 @@ print("\n Best Performing Email Type:")
 print(f"- Email Text: {best['email_text']}")
 print(f"- Email Version: {best['email_version']}")
 print(f"- Click Rate: {best['click_rate']:.2%}")
-
 
 # STEP 6: Time and Day Analysis
 
@@ -62,6 +59,5 @@ clicks_by_weekday = email_df.groupby("weekday")["clicked"].sum()
 # Display click performance by time
 print("\n Clicks by Hour:")
 print(clicks_by_hour.sort_values(ascending=False))
-
 print("\n Clicks by Weekday:")
 print(clicks_by_weekday.sort_values(ascending=False))
