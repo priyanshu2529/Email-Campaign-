@@ -58,8 +58,6 @@ Yes. Even with limited data, some patterns were observed:
 - **Email version A** had a slight edge over B in engagement.
 - The combination of **Short text + Version A** yielded the highest click-through rate.
 
->  Recommendation: Use "Short + A" as a baseline in future campaigns.
-
 ---
 
 ##  Technologies Used
