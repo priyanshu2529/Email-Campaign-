@@ -64,7 +64,7 @@ Yes. Even with limited data, some patterns were observed:
 
 - Python 
 - Pandas 
-- Jupyter/VSCode Terminal
+- VSCode Terminal
 - Git & GitHub
 
 ---
