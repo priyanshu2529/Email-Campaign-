@@ -26,7 +26,7 @@ This project analyzes an email marketing campaign to derive insights and build a
 
 ###  Can we build a model to improve email targeting?
 
-Yes. Although emails were sent randomly in this campaign, we can build a **classification model** (e.g., Logistic Regression or Decision Tree) using:
+Yes(as mentioned below). Although emails were sent randomly in this campaign, we can build a **classification model** (e.g., Logistic Regression or Decision Tree) using:
 
 - `email_version` (A or B)
 - `email_text` (Short or Long)
@@ -34,6 +34,10 @@ Yes. Although emails were sent randomly in this campaign, we can build a **class
 These can help **predict the probability of a user clicking**. Once trained, the model can optimize which type of email to send, increasing overall effectiveness.
 
 ---
+## Model Training
+
+A Random Forest classifier was trained to predict whether a user opens an email based on the dataset. The current accuracy is 98%, but due to data imbalance, precision and recall for the minority class are low. Further improvements are in progress.This all happened due to only 2% data beong true and others being false.
+
 
 ###  By how much could a model improve click-through rate?
 
