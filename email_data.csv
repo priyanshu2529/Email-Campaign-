@@ -1,0 +1,11 @@
+email_id,timestamp,email_type,open,click
+email_1,2024-01-01 08:00:00,Promotional,1,0
+email_2,2024-01-01 10:00:00,Transactional,0,1
+email_3,2024-01-01 12:00:00,Newsletter,1,0
+email_4,2024-01-01 14:00:00,Promotional,1,1
+email_5,2024-01-01 16:00:00,Transactional,0,0
+email_6,2024-01-01 18:00:00,Newsletter,1,1
+email_7,2024-01-01 20:00:00,Promotional,1,0
+email_8,2024-01-01 22:00:00,Newsletter,0,0
+email_9,2024-01-02 00:00:00,Transactional,1,1
+email_10,2024-01-02 02:00:00,Promotional,1,1
