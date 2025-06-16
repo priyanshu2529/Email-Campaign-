@@ -16,6 +16,7 @@ This project analyzes an email marketing campaign to derive insights and build a
 - `open_rate_pie_chart.png` : Pie chart of Open rate.
 - `email_data.csv` : Sample Data for the generation of charts.
 - `click_rate_by_email_type.png` : Graph for click rate.
+- `Review file` : Overall review of my project, including what methods were used and why were they used.
 
 ---
 
